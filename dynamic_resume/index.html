@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Resume Builder</title>
+    <link rel="stylesheet" href="styles.css"> 
+    <script src="main.js" defer></script>
+</head>
+<body>
+
+<form id="resumeForm">
+    <h2>Personal Information</h2>
+    <label for="name">Name:</label>
+    <input type="text" id="name" placeholder="Enter your name" title="Enter your full name" required />
+
+    <label for="email">Email:</label>
+    <input type="email" id="email" placeholder="Enter your email" title="Enter a valid email address" required />
+
+    <h2>Education</h2>
+    <label for="education">Education:</label>
+    <input type="text" id="education" placeholder="Your education" title="Enter your highest education level" required />
+
+    <h2>Skills</h2>
+    <label for="skills">Skills:</label>
+    <input type="text" id="skills" placeholder="Enter your skills (comma separated)" title="List your skills separated by commas" required />
+
+    <h2>Profile Picture</h2>
+    <input type="file" id="profilePicInput" accept="image/*" title="Upload your profile picture" />
+
+    <h2>Work Experience</h2>
+    <label for="experience">Work Experience:</label>
+    <textarea id="experience" placeholder="Describe your work experience" title="Detail your previous job experiences"></textarea>
+
+    <button type="submit">Generate Resume</button>
+</form>
+
+<section id="resumeDisplay">
+    <h2>Personal Information</h2>
+    <p><strong>Name:</strong> <span id="displayName" contenteditable="true"></span></p>
+    <p><strong>Email:</strong> <span id="displayEmail" contenteditable="true"></span></p>
+
+    <h2>Profile Picture</h2>
+    <img id="displayProfilePic" src="" alt="Profile Picture" />
+
+    <h2>Education</h2>
+    <p id="displayEducation" contenteditable="true"></p>
+
+    <h2>Skills</h2>
+    <ul id="displaySkills" contenteditable="true"></ul>
+
+    <h2>Work Experience</h2>
+    <p id="displayExperience" contenteditable="true"></p>
+</section>
+
+<h3>Your Shareable Resume Link:</h3>
+<p id="resumeLink"></p>
+
+<button id="downloadResumeBtn" class="hidden">Download Resume as PDF</button>
+
+</body>
+</html>
